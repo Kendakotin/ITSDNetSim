@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ITSDaks Netsim Cisco labs</title>
+  <meta name="description" content="Browser-based troubleshooting labs for CCNA and CCNP: real-world scenarios with a separate solution." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">⎈</div>
+      <div class="brand-text">
+        <div class="brand-title">ITSDaks Netsim Cisco labs</div>
+        <div class="brand-sub">CCNA + CCNP • problem → troubleshoot → solution</div>
+      </div>
+    </div>
+
+    <nav class="top-nav" aria-label="Primary">
+      <button class="nav-btn" data-route="home" id="navHome">Home</button>
+      <button class="nav-btn" data-route="track/CCNA" id="navCCNA">CCNA</button>
+      <button class="nav-btn" data-route="track/CCNP" id="navCCNP">CCNP</button>
+      <button class="nav-btn" data-route="about" id="navAbout">About</button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <section class="toolbar" id="toolbar">
+      <div class="toolbar-left">
+        <div class="pill" id="routePill">Home</div>
+        <div class="toolbar-title" id="toolbarTitle">Browse labs</div>
+      </div>
+
+      <div class="toolbar-right">
+        <label class="search">
+          <span class="sr-only">Search labs</span>
+          <input id="searchInput" type="search" placeholder="Search (e.g., VLAN, OSPF, HSRP, ACL, NAT)" autocomplete="off" />
+        </label>
+        <select id="difficultyFilter" class="select" aria-label="Difficulty filter">
+          <option value="">All difficulties</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="view" class="view" aria-live="polite"></section>
+  </main>
+
+  <footer class="app-footer">
+    <div>
+      <span class="muted">Tip:</span> Use the <span class="kbd">Console</span> tab to run “show” commands and <span class="kbd">ping</span>/<span class="kbd">traceroute</span> in a safe, browser-only simulation.
+    </div>
+    <div class="muted">
+      Built as a static site (no backend). Add/edit labs in <span class="kbd">assets/labs.js</span>.
+    </div>
+  </footer>
+
+  <script src="assets/labs.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
